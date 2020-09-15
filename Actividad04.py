@@ -83,6 +83,23 @@ def Zodiacal():
     else:
         print("ERROR -> Algo Salio mal...")
 
+# -- Declaracion de funcion Factorial --
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+# --  Declaracion de la  funcion Calcular e --
+def Calcular_e():# declaramos las variables
+    limite = 4
+    e = 0
+    n = 0
+    while n < limite: # inicio del ciclo while
+        e += 1/factorial(n)
+        n = n + 1
+    
+    print(f"El valor de e es -> {e}")
+
 import math #Esta importacion nos ayuda para poder importar el valor de pi y que sea mas exacto el dato
 
 # -- Declaración de Menú --
@@ -111,6 +128,7 @@ elif menu == 4:
     Zodiacal()
 elif menu == 5:
     print(".:Cálculo del Número e:.\n\n")
+    Calcular_e()
 elif menu == 6:
     print(".:Salir:.\n\n"
           "HASTA PRONTO, GRACIAS POR USAR EL SOFTWARE :)\n\n")
